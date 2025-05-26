@@ -1,0 +1,75 @@
+body {
+    background: radial-gradient(rgb(122, 114, 114) 25%, #363535);
+}
+form {
+    background-color: #fff;
+    padding: 1em;
+    border-radius: 10px;
+    margin: 2em auto;
+    box-shadow: 0 2px 20px -2px #999;
+}
+.form {
+    width: 60%;
+    margin: 0 auto;
+    padding: 1em;
+    border-radius: 10px;
+    background-color: #fff;
+}
+.img-icon {
+    width: 260px;
+    display: block;
+    margin: 0 auto;
+    border-radius: 50%;
+    border: 2px solid #999;
+    box-shadow: 0 0 20px -2px #999;
+}
+h2 {
+    text-align: center;
+}
+.fbs {
+    width: 50%;
+    margin: 0 auto;
+}
+.fbs button {
+    width: 100%;
+}
+
+.banner-icon {
+    width: 200px;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto;
+    box-shadow: 0 2px 15px -2px #999;
+}
+
+.icon {
+    display: inline;
+    width: 1.2em;
+}
+form .button-container {
+    margin: 0 auto;
+    width: 50%;
+}
+.button-container button {
+    width: 100%;
+}
+.overflow {
+    display: none;
+}
+@media only screen and (max-width: 700px) {
+    form {
+        margin: 1em auto;
+    }
+    .my-form {
+        flex-direction: column;
+    }
+    .my-form-add {
+        flex-direction: column;
+    }
+    form .button-container {
+        width: 80%;
+    }
+    
+}
+@media only screen and (max-width:950px) and (min-width:701px){
+}

@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>AVANCE DE PROYECTO</title>
+    <!-- Favicon: ícono del equipo en la pestaña del navegador -->
+    <link rel="icon" href="imgs/icono-equipo.png" type="image/x-icon">
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+</head>
+
+<body class="d-flex flex-column min-vh-100">
+
+    <!-- Navbar (Componente: Navbar - Bootstrap 5) -->
+    <!-- Documentación: https://getbootstrap.com/docs/5.3/components/navbar/ -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="../index.html"> Inicio </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="./../login/index.html"> Cuenta </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" aria-disabled="true" > Admin </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./../register/register.html" ">Registro </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Navbar (Componente: Navbar - Bootstrap 5) -->
+    <!-- Documentación: https://getbootstrap.com/docs/5.3/components/navbar/ -->
+    <nav class="navbar navbar-expand-lg bg-white">
+        <div class="container d-flex justify-content-between align-items-center px-4" style="max-width: 1000px;">
+            <!-- Logo IPN -->
+            <a href="https://www.ipn.mx" target="_blank">
+                <img src="imgs/IPN.png" alt="IPN" height="150" title="IPN">
+            </a>
+            <!-- Logo CENDI -->
+            <a href="https://www.ipn.mx/cocendi/" target="_blank">
+                <img src="imgs/Mascota.png" alt="CENDI" height="150" title="CENDI">
+            </a>
+        </div>
+    </nav>
+    <!-- Formulario centrado (Componente: Forms - Bootstrap 5) -->
+    <!-- Documentación: https://getbootstrap.com/docs/5.3/forms/overview/ -->
+    <div class=" d-flex justify-content-center align-items-center flex-grow-1">
+                            <div class="container" style="max-width: 600px;">
+                                <h2 class="text-center mb-4">Acceso al sistema:</h2>
+                                <form method="get" action="bienvenido.html" autocomplete="off">
+                                    <div class="row g-3 align-items-center">
+                                        <div class="col-md-6">
+                                            <div class="input-group">
+                                                <span class="input-group-text">
+                                                    <img src="imgs/user-solid.svg" alt="user" width="20">
+                                                </span>
+                                                <input type="text" id="user" name="user" class="form-control"
+                                                    placeholder="Usuario" required>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="input-group">
+                                                <span class="input-group-text">
+                                                    <img src="imgs/key-solid.svg" alt="pass" width="20">
+                                                </span>
+                                                <input type="password" id="pass" name="pass" class="form-control"
+                                                    placeholder="Contraseña" required>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button type="submit" class="btn btn-primary w-100 mt-4">Ingresar</button>
+                                </form>
+
+                            </div>
+            </div>
+
+
+            <!-- Footer (Ejemplo: Footers - Bootstrap 5) -->
+            <!-- Documentación: https://getbootstrap.com/docs/5.3/examples/footers/ -->
+            <footer class="bg-primary d-flex justify-content-between w-100 p-3 mx-auto" style="max-width: 80%;">
+                <p class="mb-0 text-light"><a href="https://www.escom.ipn.mx" class="text-light text-decoration-none"
+                        target="_blank">ESCOM</a>
+                </p>
+                <p class="text-light mb-0">© 2025 Copyright TDAW - 4CM4 - E7</p>
+            </footer>
+
+            <!-- Bootstrap 5 JS Bundle -->
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+                integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+                crossorigin="anonymous"></script>
+            <script>
+                document.getElementById('submit-button').addEventListener('click', function () {
+                    const user = document.getElementById('user').value;
+                    const pass = document.getElementById('pass').value;
+
+                    // "Simular" POST pasando datos en URL
+                    window.location.href = `bienvenido.html?user=${encodeURIComponent(user)}&pass=${encodeURIComponent(pass)}`;
+                });
+            </script>
+</body>
+
+</html>

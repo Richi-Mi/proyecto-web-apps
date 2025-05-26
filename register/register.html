@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Registro </title>
+    <!-- CDN Bootstrap CSS-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+
+    <!-- CDN del calendario -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
+    <!-- Mis stilos -->
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body class="d-flex flex-column min-vh-100">
+    <!-- Barra de navegación -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="../index.html"> Inicio </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="./../login/index.html"> Cuenta </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./../admin/Login_equipo7.html"> Admin </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" aria-disabled="true">Registro </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <form action="submit" method="post" class="container" id="register-form">
+        <div class="mb-3 mt-3 row text-center">
+            <div class="col">
+                <img src="./../images/mikuIcon.png" alt="99%fe icon" class="banner-icon">
+                <h2> 99% fé 👉👈 </h2>
+            </div>
+            <div class="col title-form">
+                <h1> Formulario de registro para alumnos de nuevo ingreso. </h1>
+            </div>
+        </div>
+        <div class="row my-form">
+            <fieldset class="col">
+                <legend> <img src="./../images/agregar-usuario.png" alt="icon-user" class="icon"> Datos Personales
+                </legend>
+                <hr>
+                <div class="mb-3 col">
+                    <label for="form-full-name" class="form-label"> Ingresa tu nombre completo: </label>
+                    <input type="text" name="form-full-name" id="form-fullName" class="form-control">
+                </div>
+                <div class="mb-3 col">
+                    <label for="form-boleta" class="form-label"> Ingresa tu boleta: </label>
+                    <input type="text" name="form-boleta" id="form-boleta" class="form-control" maxlength="10">
+                    <p class="valid-feedback"> Se ve bien 👌 </p>
+                    <p class="invalid-feedback"> Ingresa una boleta valida. </p>
+                </div>
+                <div class="mb-3 col">
+                    <label for="form-tel" class="form-label"> Ingresa tu numero telefonico: </label>
+                    <input type="text" name="form-tel" id="form-tel" class="form-control">
+                    <p class="invalid-feedback"> Ingresa un telefono valido. </p>
+                </div>
+                <div class="mb-3 col">
+                    <label for="form-curp" class="form-label"> Ingresa tu CURP: </label>
+                    <input type="text" name="form-curp" id="form-curp" class="form-control">
+                    <p class="valid-feedback"> Se ve bien 👌 </p>
+                    <p class="invalid-feedback"> Ingresa una CURP valida </p>
+                </div>
+                <!-- Entidad Federativa. -->
+                <div class="col mb-3">
+                    <p>Seleccione su entidad federativa de procedencia:</p>
+                    <select aria-label="Default select example" id="form-entidades" class="form-select">
+                        <option value="default">Seleccione su entidad federativa.</option>
+                        <option value="AGU">Aguascalientes</option>
+                        <option value="BCN">Baja California</option>
+                        <option value="BCS">Baja California Sur</option>
+                        <option value="CAM">Campeche</option>
+                        <option value="CHP">Chiapas</option>
+                        <option value="CHH">Chihuahua</option>
+                        <option value="CMX">Ciudad de México</option>
+                        <option value="COA">Coahuila</option>
+                        <option value="COL">Colima</option>
+                        <option value="DUR">Durango</option>
+                        <option value="GUA">Guanajuato</option>
+                        <option value="GRO">Guerrero</option>
+                        <option value="HID">Hidalgo</option>
+                        <option value="JAL">Jalisco</option>
+                        <option value="MEX">Estado de México</option>
+                        <option value="MIC">Michoacán</option>
+                        <option value="MOR">Morelos</option>
+                        <option value="NAY">Nayarit</option>
+                        <option value="NLE">Nuevo León</option>
+                        <option value="OAX">Oaxaca</option>
+                        <option value="PUE">Puebla</option>
+                        <option value="QUE">Querétaro</option>
+                        <option value="ROO">Quintana Roo</option>
+                        <option value="SLP">San Luis Potosí</option>
+                        <option value="SIN">Sinaloa</option>
+                        <option value="SON">Sonora</option>
+                        <option value="TAB">Tabasco</option>
+                        <option value="TAM">Tamaulipas</option>
+                        <option value="TLA">Tlaxcala</option>
+                        <option value="VER">Veracruz</option>
+                        <option value="YUC">Yucatán</option>
+                        <option value="ZAC">Zacatecas</option>
+                    </select>
+                </div>
+                <div class="row my-form-add mb-3 mt-3">
+                    <!-- GENDER FORM -->
+                    <div class="col mb-3">
+                        <p class="text-form"> Selecciona tu genero: </p>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="radioDefault" id="radioDefault1">
+                            <label class="form-check-label" for="radioDefault1">
+                                Masculino
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="radioDefault" id="radioDefault2" checked>
+                            <label class="form-check-label" for="radioDefault2">
+                                Femenino
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col mb-3">
+                        <label class="form-label"> Seleccione su fecha de nacimiento: </label>
+                        <input type="text" class="form-control" id="fecha" name="form-date">
+                    </div>
+                </div>
+
+            </fieldset>
+            <fieldset class="col">
+                <legend> <img src="./../images/colegio.png" alt="school" class="icon"> Datos de procedencia: </legend>
+                <hr>
+                <div class="col mb-3">
+                    <p>Seleccione su escuela de procedencia:</p>
+                    <select aria-label="Escuelas del IPN" id="form-escuelas" class="form-select">
+                        <option value="default">Seleccione su escuela.</option>
+                        <option value="cecyt1">CECyT 1 "Gonzalo Vázquez Vela"</option>
+                        <option value="cecyt2">CECyT 2 "Miguel Bernard"</option>
+                        <option value="cecyt3">CECyT 3 "Estanislao Ramírez Ruiz"</option>
+                        <option value="cecyt4">CECyT 4 "Lázaro Cárdenas"</option>
+                        <option value="cecyt5">CECyT 5 "Benito Juárez"</option>
+                        <option value="cecyt6">CECyT 6 "Miguel Othón de Mendizábal"</option>
+                        <option value="cecyt7">CECyT 7 "Cuauhtémoc"</option>
+                        <option value="cecyt8">CECyT 8 "Narciso Bassols"</option>
+                        <option value="cecyt9">CECyT 9 "Juan de Dios Bátiz"</option>
+                        <option value="cecyt10">CECyT 10 "Carlos Vallejo Márquez"</option>
+                        <option value="cecyt11">CECyT 11 "Wilfrido Massieu"</option>
+                        <option value="cecyt12">CECyT 12 "José María Morelos"</option>
+                        <option value="cecyt13">CECyT 13 "Ricardo Flores Magón"</option>
+                        <option value="cecyt14">CECyT 14 "Luis Enrique Erro"</option>
+                        <option value="cecyt15">CECyT 15 "Diódoro Antúnez Echegaray"</option>
+                        <option value="cecyt16">CECyT 16 "Hidalgo"</option>
+                        <option value="cecyt17">CECyT 17 "León, Guanajuato"</option>
+                        <option value="cecyt18">CECyT 18 "Zacatecas"</option>
+                        <option value="cet1">CET 1 "Walter Cross Buchanan"</option>
+                        <option value="other"> Otra... </option>
+                    </select>
+                </div>
+
+                <div class="col mb-3 overflow" id="hidden">
+                    <label for="form-school-precedence" class="form-label"> Ingrese el nombre de su escuela de procedencia: </label>
+                    <input type="text" name="form-school-precedence" id="form-school-precedence" class="form-control">
+                </div>
+                <div class="col mb-3">
+                    <label for="form-prom" class="form-label"> Ingresa tu promedio: </label>
+                    <input type="number" name="form-prom" id="form-prom" class="form-control" max="10" min="6">
+                    <p class="invalid-feedback"> Ingresa un promedio valido </p>
+                    <p class="valid-feedback"> Wow, gran promedio </p>
+                </div>
+                <legend> <img src="./../images/correo-electronico.png" alt="email" class="icon"> Datos de cuenta </legend>
+                <hr>
+                <div class="col mb-3">
+                    <label for="form-email" class="form-label"> Ingresa tu correo institucional: </label>
+                    <input type="email" name="form-email" id="form-email" class="form-control">
+                    <p class="valid-feedback"> Se ve bien 👌 </p>
+                    <p class="invalid-feedback"> Ingresa un correo valido pa </p>
+                </div>
+                <div class="col mb-3">
+                    <label for="form-pass" class="form-label"> Ingresa tu contraseña </label>
+                    <input type="password" name="form-pass" id="form-pass" class="form-control">
+                    <p class="invalid-feedback"> Ingresa una contraseña que tenga + de 6 caracteres </p>
+                    <p class="valid-feedback"> Uff que seguridad </p>
+                </div>
+            </fieldset>
+        </div>
+        <div class="mt-4 button-container row">
+            <div class="col">
+                <button type="submit" class="btn btn-primary"> Ingresar </button>
+            </div>
+            <div class="col">
+                <button class="btn btn-secondary" type="reset"> Limpiar </button>
+            </div>
+        </div>
+    </form>
+    <!-- Footer (Ejemplo: Footers - Bootstrap 5) -->
+    <!-- Documentación: https://getbootstrap.com/docs/5.3/examples/footers/ -->
+    <footer class="bg-primary d-flex justify-content-between w-100 p-3 mx-auto" style="max-width: 80%;">
+        <p class="mb-0 text-light"><a href="https://www.escom.ipn.mx" class="text-light text-decoration-none"
+                    target="_blank">ESCOM</a>
+        </p>
+        <p class="text-light mb-0">© 2025 Copyright TDAW - 4CM4 - E7</p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
+        crossorigin="anonymous"></script>
+    <script src="./main.js"></script>
+</body>
+
+</html>

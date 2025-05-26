@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title> Login </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body class="d-flex flex-column min-vh-100">
+    <!-- Navbar (Componente: Navbar - Bootstrap 5) -->
+    <!-- Documentación: https://getbootstrap.com/docs/5.3/components/navbar/ -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="../index.html"> Inicio </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link disabled" aria-disabled="true"> Cuenta </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./../admin/Login_equipo7.html" > Admin </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./../register/register.html" ">Registro </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container flex-grow-1">
+        <form class="form mt-3">
+            <div class="mb-3 mt-2">
+                <img src="./XD.jpg" alt="99%fe" class="img-icon">
+            </div>
+            <h2> Ingresar a la cuenta. </h2>
+            <div class="mb-3">
+                <label for="school-id" class="form-label"> Ingrese su boleta: </label>
+                <input type="email" name="school-id" id="form-school-id" class="form-control">                
+                <p class="form-text"> Es un numero que sirve para identificarte en el sistema. </p>
+            </div>
+    
+            <div class="mb-3">
+                <label for="school-password" class="form-label"> Ingrese su contraseña: </label>
+                <input type="password" name="school-password" id="form-school-password" class="form-control">
+            </div>
+    
+            <div class="fbs">
+                <button type="submit" class="btn btn-primary" id="btn-submit"> Ingresar </button>
+            </div>
+    
+            <div class="mb-3 mt-3">
+                <a href=""> ¿Aun no estas registrado? Ingresa aqui </a>
+            </div>
+        </form>
+    </div>
+    <!-- Footer (Ejemplo: Footers - Bootstrap 5) -->
+    <!-- Documentación: https://getbootstrap.com/docs/5.3/examples/footers/ -->
+    <footer class="bg-primary d-flex justify-content-between w-100 p-3 mx-auto" style="max-width: 80%;">
+        <p class="mb-0 text-light"><a href="https://www.escom.ipn.mx" class="text-light text-decoration-none"
+            target="_blank">ESCOM</a>
+        </p>
+        <p class="text-light mb-0">© 2025 Copyright TDAW - 4CM4 - E7</p>
+    </footer>
+    <script src="./main.js"></script>
+</body>
+</html>
