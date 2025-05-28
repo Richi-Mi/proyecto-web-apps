@@ -31,31 +31,14 @@ in_boleta.addEventListener('input', (evt) => {
     setValid( regex.test(evt.target.value), in_boleta )
 })
 in_curp.addEventListener('input', (evt) => {
-    const regexCURP = /^\w{4}\d{4}\w{7}\d$/
+    const regexCURP = /\w{4}\d{4}\w{7}\d$/
     setValid( regexCURP.test(evt.target.value), in_curp )
 })
 in_tel.addEventListener('input', (e) => {
-    let value = e.target.value.replace(/\D/g, ''); // Elimina todo lo que no sea número
-    if( in_tel.classList.contains('is-invalid') ) 
-        in_tel.classList.remove('is-invalid')
-
-    // Aplica formato: XX XXXX XXXX o XXX XXX XXXX
-    if (value.length <= 2) {
-      e.target.value = value;
-    } else if (value.length <= 6) {
-      e.target.value = value.replace(/(\d{2})(\d+)/, '$1 $2');
-    } else if (value.length <= 10) {
-      if (value.length === 10 && value.startsWith('55')) {
-        // Formato para CDMX: 55 1234 5678
-        e.target.value = value.replace(/(\d{2})(\d{4})(\d{0,4})/, '$1 $2 $3');
-      } else {
-        // Otros: 722 123 4567
-        e.target.value = value.replace(/(\d{3})(\d{3})(\d{0,4})/, '$1 $2 $3');
-      }
-    } 
-    else {
-        in_tel.classList.add('is-invalid')
-    }
+    const regex = /^\d{10}$/
+    const valid = regex.test(e.target.value)
+    setValid( valid, in_tel )
+    value ? in_tel.value = `${e.target.value.substring(0, 2)} ${e.target.value.substring(2, 6)} ${e.target.value.substring(6, 10)}` : in_tel.value = e.target.value.replaceAll(' ', '')
 })
 select_schol.addEventListener('change', (evt) => {
     const in_school = document.getElementById('hidden')
@@ -92,3 +75,5 @@ document.getElementById('register-form').addEventListener('reset', () => {
         input.classList.remove('is-invalid')        
     }    
 })
+
+document.getElementById('fecha').addEventListener()

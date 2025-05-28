@@ -69,6 +69,12 @@ form .button-container {
     form .button-container {
         width: 80%;
     }
+    .loginForm {
+        width: 100%;
+    }
+    .img-icon {
+        width: 160px;
+    }
     
 }
 @media only screen and (max-width:950px) and (min-width:701px){
