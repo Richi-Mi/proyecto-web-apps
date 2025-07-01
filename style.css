@@ -1,12 +1,16 @@
 body {
     background: radial-gradient(rgb(122, 114, 114) 25%, #363535);
 }
+form.opacity {
+    filter: opacity(0.2);
+}
 form {
     background-color: #fff;
     padding: 1em;
     border-radius: 10px;
     margin: 2em auto;
     box-shadow: 0 2px 20px -2px #999;
+    transition: .3s ease-out filter;
 }
 .form {
     width: 60%;
@@ -55,6 +59,23 @@ form .button-container {
 }
 .overflow {
     display: none;
+}
+.img-admin {
+    filter:grayscale(0.9);
+}
+.alert-msg {
+    width: 30em;
+    margin: 0 auto;
+    position: absolute;
+    left: calc(50% - 15em);
+    transition: .3s ease transform;
+    top: 50%;
+}
+.alert-msg.show {
+    transform: scale(1);
+}
+.alert-msg.hidden {
+    transform: scale(0);
 }
 @media only screen and (max-width: 700px) {
     form {

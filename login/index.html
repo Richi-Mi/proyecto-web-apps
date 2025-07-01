@@ -15,7 +15,12 @@
     <!-- Documentación: https://getbootstrap.com/docs/5.3/components/navbar/ -->
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
-            <a class="navbar-brand" href="../index.html"> Inicio </a>
+            <a class="navbar-brand" href="https://www.escom.ipn.mx" target="_blank">
+                <img src="./../images/loginESCUM.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+            </a>
+            <a class="navbar-brand" href="./../index.html">
+                Inicio
+            </a>  
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -36,28 +41,32 @@
         </div>
     </nav>
     <div class="container flex-grow-1">
-        <form class="form mt-3 loginForm">
+        <form class="form mt-3 loginForm" action="login.php" method="post" id="formu">
             <div class="mb-3 mt-2 d-flex">
                 <img src="./../images/mikuIcon.png" alt="99%fe" class="img-icon">
             </div>
-            <h2> Ingresar a la cuenta. </h2>
+            <h2> Ingresar su cuenta de estudiante. </h2>
             <div class="mb-3">
                 <label for="school-id" class="form-label"> Ingrese su boleta: </label>
                 <input type="text" name="school-id" id="form-school-id" class="form-control">                
                 <p class="form-text"> Es un numero que sirve para identificarte en el sistema. </p>
+                <p class="valid-feedback"> Se ve bien 👌 </p>
+                <p class="invalid-feedback"> Ingresa una boleta valida. </p>
             </div>
     
             <div class="mb-3">
                 <label for="school-password" class="form-label"> Ingrese su contraseña: </label>
                 <input type="password" name="school-password" id="form-school-password" class="form-control">
+                <p class="invalid-feedback"> Ingresa una contraseña que tenga + de 6 caracteres </p>
+                <p class="valid-feedback"> Uff que seguridad </p>
             </div>
     
             <div class="fbs">
-                <button type="submit" class="btn btn-primary" id="btn-submit"> Ingresar </button>
+                <button class="btn btn-primary" id="btn-submit" type="submit"> Ingresar </button>
             </div>
     
             <div class="mb-3 mt-3">
-                <a href="./../register/register.html"> ¿Aun no estas registrado? Ingresa aqui </a>
+                <a href="./../register/register.html"> ¿Aún no estás registrado? Ingresa aquí </a>
             </div>
         </form>
     </div>
