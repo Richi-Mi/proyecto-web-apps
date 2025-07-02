@@ -67,10 +67,28 @@ function editarUsuario(boleta) {
 
 function eliminarUsuario(boleta) {
   if (confirm('¿Seguro que deseas eliminar este usuario?')) {
-    alert(`Eliminar usuario ID: ${boleta}`);
-    // Aquí puedes hacer un fetch a eliminar_usuario.php
+    fetch('ruta/al/eliminar_usuario.php', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/x-www-form-urlencoded',
+      },
+      body: `boleta=${encodeURIComponent(boleta)}`
+    })
+    .then(response => response.json())
+    .then(data => {
+      alert(data.message);
+      if (data.status === 'success') {
+        // Actualiza la vista o recarga si es necesario
+        location.reload();
+      }
+    })
+    .catch(error => {
+      console.error('Error:', error);
+      alert('Error al comunicarse con el servidor.');
+    });
   }
 }
+
 
 // Guardar cambios del formulario
 document.getElementById('formEditar').addEventListener('submit', function(e) {
