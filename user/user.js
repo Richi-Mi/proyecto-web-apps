@@ -12,6 +12,7 @@ function cargarInfo() {
                     <p><strong>Boleta:</strong> ${data.boleta}</p>
                     <p><strong>Laboratorio de examen:</strong> ${data.lab}</p>
                     <p><strong>Fecha de examen:</strong> ${data.fecha}</p>
+                    <p><strong>Hora de examen:</strong> ${data.hora}</p>
                 `;
             })
             .catch(error => {
