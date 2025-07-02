@@ -105,8 +105,7 @@ formu.addEventListener('submit', (evt) => {
             <b> Fecha</b> : ${in_date.value} <br>
             <b> Escuela</b> : ${ escuela } <br>
             <b> Promedio</b> : ${ in_prom.value} <br>
-            <b> Correo</b> : ${ in_email.value } <br>
-            <b> Contraseña</b> : ${ in_pass.value } <br><br>
+            <b> Correo</b> : ${ in_email.value } <br><br>
 
             Al seleccionar aceptar seras redirigido para que inicies sesión.
         `

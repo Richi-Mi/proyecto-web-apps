@@ -3,6 +3,11 @@ const schoolPass = document.getElementById('form-school-password')
 const btnSubmit  = document.getElementById('btn-submit')
 const formu      = document.getElementById('formu')
 
+const alertMSG      = document.querySelector('.alert-msg-sucess');
+const alertError    = document.querySelector('.alert-msg-error');
+const container     = document.querySelector('.container');
+
+
 const validForm = {
     boleta: false,
     password: false
@@ -34,7 +39,49 @@ formu.addEventListener('submit', (evt) => {
         alert("Ingrese datos validos")
     }
     else {
-        alert(`Tu boleta ${schoolId.value} y su pass: ${schoolPass.value}`)
-        formu.submit();
+        const formData = new FormData();
+        formData.append('school-id', schoolId.value);
+        formData.append('school-password', schoolPass.value );
+
+        fetch("login.php", {
+            method: 'POST',
+            body: formData
+        })
+        .then( res => res.json())
+        .then( data => {
+            localStorage.setItem('data', JSON.stringify(data.alumno))
+            localStorage.setItem('loged', 'true' );
+            if( data.success ) {
+                document.querySelector('#text').textContent = data.message;
+
+                alertMSG.classList.add('show');
+                alertMSG.classList.remove('hidden');
+
+                container.classList.add('opacity');
+            }
+            else {
+                alertError.classList.add('show');
+                alertError.classList.remove('hidden');
+
+                document.querySelector('#text-e').textContent = data.message;
+                container.classList.add('opacity');
+
+            }
+        })
+        .catch( err => {
+            console.log(err);
+            
+        })
+        
     }
+})
+document.getElementById('btn-aceptar').addEventListener('click', () => {
+    window.location.href = '../user/user.html'
+});
+document.getElementById('btn-error').addEventListener('click', () => {
+    alertError.classList.add('hidden');
+    alertError.classList.remove('show');
+
+    container.classList.remove('opacity');
+
 })

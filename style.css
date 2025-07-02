@@ -1,8 +1,11 @@
 body {
     background: radial-gradient(rgb(122, 114, 114) 25%, #363535);
 }
-form.opacity {
-    filter: opacity(0.2);
+.opacity {
+    filter: opacity(0.1);
+}
+.container {
+    transition: .3s ease-out filter;
 }
 form {
     background-color: #fff;
@@ -37,7 +40,9 @@ h2 {
 .fbs button {
     width: 100%;
 }
-
+.title-info {
+    color: #fff;
+}
 .banner-icon {
     width: 200px;
     border-radius: 50%;
@@ -63,7 +68,9 @@ form .button-container {
 .img-admin {
     filter:grayscale(0.9);
 }
-.alert-msg {
+.alert-msg,
+.alert-msg-sucess,
+.alert-msg-error {
     width: 30em;
     margin: 0 auto;
     position: absolute;
@@ -71,11 +78,17 @@ form .button-container {
     transition: .3s ease transform;
     top: 50%;
 }
-.alert-msg.show {
+.show {
     transform: scale(1);
 }
-.alert-msg.hidden {
+.hidden {
     transform: scale(0);
+}
+.alert-msg-sucess {
+    background-color: greenyellow;
+}
+.alert-msg-error {
+    background-color: whitesmoke;
 }
 @media only screen and (max-width: 700px) {
     form {

@@ -41,7 +41,7 @@
         </div>
     </nav>
     <div class="container flex-grow-1">
-        <form class="form mt-3 loginForm" action="login.php" method="post" id="formu">
+        <form class="form mt-3 loginForm" action="submit" method="post" id="formu">
             <div class="mb-3 mt-2 d-flex">
                 <img src="./../images/mikuIcon.png" alt="99%fe" class="img-icon">
             </div>
@@ -69,6 +69,24 @@
                 <a href="./../register/register.html"> ¿Aún no estás registrado? Ingresa aquí </a>
             </div>
         </form>
+    </div>
+     <div class="card p-3 w-70 alert-msg-sucess hidden">
+        <h3 id="text">  </h3>
+
+        <div class="row">
+            <div class="col">
+                <button class="btn btn-primary" id="btn-aceptar"> Aceptar </button>
+            </div>
+        </div>
+    </div>
+    <div class="card p-3 w-70 alert-msg-error hidden">
+        <h3 id="text-e"> : </h3>
+
+        <div class="row">
+            <div class="col">
+                <button class="btn btn-danger" id="btn-error"> Reintentar </button>
+            </div>
+        </div>
     </div>
     <!-- Footer (Ejemplo: Footers - Bootstrap 5) -->
     <!-- Documentación: https://getbootstrap.com/docs/5.3/examples/footers/ -->
