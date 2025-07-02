@@ -34,14 +34,14 @@ $pdf->AddPage();
 $pdf->SetFont('Arial', 'B', 16);
 
 // REMOVIDO utf8_decode() en estas líneas
-$pdf->Cell(0, 10, 'Reporte de Informacion del Alumno y Examen', 0, 1, 'C');
+$pdf->Cell(0, 10, utf8_decode('Reporte de Información del Alumno y Examen'), 0, 1, 'C');
 $pdf->Ln(10);
 
 $pdf->SetFont('Arial', '', 12);
 
 $labels = [
-    'Boleta', 'Nombre Completo', 'Telefono', 'CURP', 'Entidad de Nacimiento',
-    'Genero', 'Fecha de Nacimiento', 'Escuela de Procedencia', 'Promedio General', 'Correo Electronico'
+    'Boleta', 'Nombre Completo', 'Teléfono', 'CURP', 'Entidad de Nacimiento',
+    'Género', 'Fecha de Nacimiento', 'Escuela de Procedencia', 'Promedio General', 'Correo Electrónico'
 ];
 
 $examen_labels = [
@@ -65,7 +65,7 @@ for ($i = 0; $i < count($labels); $i++) {
 $pdf->Ln(10);
 
 $pdf->SetFont('Arial', 'B', 14);
-$pdf->Cell(0, 10, 'Datos del Examen de Admision', 0, 1, 'L');
+$pdf->Cell(0, 10, 'Datos del Examen de Admisión', 0, 1, 'L');
 $pdf->SetFont('Arial', '', 12);
 $pdf->Ln(2);
 
