@@ -19,7 +19,7 @@
         $this->SetY(-20);
         $this->SetFont('helvetica','I','10');
         //Creamos nuestro pie de página
-        $this->Cell(0,15,'Pagina '.$this->PageNo().'/{nb}',0,0,'C');
+        $this->Cell(0,15,'Página '.$this->PageNo().'/{nb}',0,0,'C');
     }
     }
 
@@ -43,7 +43,7 @@
 
     $alumno_examen_data = pg_fetch_row($result_execute);
 
-    pg_close($conn);
+pg_close($conn);
 
     if (!$alumno_examen_data) {
         http_response_code(404);
@@ -61,9 +61,10 @@
     $pdf->SetFont('Arial', '', 12);
 
     $labels = [
-        'Boleta', 'Nombre Completo', 'Telefono', 'CURP', 'Entidad de Nacimiento',
-        'Genero', 'Fecha de Nacimiento', 'Escuela de Procedencia', 'Promedio General', 'Correo Electronico'
-    ];
+      'Boleta', 'Nombre Completo', 'Teléfono', 'CURP', 'Entidad de Nacimiento',
+      'Género', 'Fecha de Nacimiento', 'Escuela de Procedencia', 'Promedio General', 'Correo Electrónico'
+  ];
+
 
     $examen_labels = [
         'Fecha del Examen', 'Hora del Examen'
