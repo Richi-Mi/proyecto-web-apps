@@ -49,7 +49,8 @@
         http_response_code(404);
         exit;
     }
-    $pdf = new FPDF();
+    $pdf = new PDF();
+    $pdf->AliasNbPages();
     $pdf->AddPage();
     $pdf->SetFont('Arial', 'B', 16);
 
@@ -81,7 +82,6 @@
         $pdf->Cell(60, 10, $labels[$i] . ':', 0);
         $pdf->Cell(0, 10, $value, 0, 1);
     }
-    $pdf = new PDF();
     $pdf->Ln(10);
 
     $pdf->SetFont('Arial', 'B', 14);
