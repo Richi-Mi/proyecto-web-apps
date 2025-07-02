@@ -70,7 +70,8 @@ in_email.addEventListener('input', () => {
     setValid( validForm.email, in_email )
 })
 in_pass.addEventListener('input', () => { 
-    validForm.pass = in_pass.value.length >= 6;
+    const regex = /^(?=.*[A-Z])(?=.*\d)(?=.*[^A-Za-z0-9]).{6,}$/;
+    validForm.pass = regex.test(in_pass.value);
     setValid(validForm.pass, in_pass);
 })
 

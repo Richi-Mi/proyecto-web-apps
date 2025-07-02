@@ -43,7 +43,8 @@
             <h2>Usuarios Registrados</h2>
             <button class="btn btn-primary" id="btnAgregar">Agregar Usuario</button>
         </div>
-        <div class="table-responsive">
+        <!--<div class="table-responsive"> -->
+        <div>
             <table class="table caption-top">
             <thead class="table-light">
                 <tr>
@@ -71,29 +72,33 @@
     <!-- Modal de Edición (Bootstrap 5) -->
     <!-- Documentación: https://getbootstrap.com/docs/5.3/components/modal/ -->
     <div class="modal fade" id="modalEditar" tabindex="-1" aria-labelledby="modalEditarLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-        <form id="formEditar">
-            <div class="modal-header">
-                <h5 class="modal-title" id="modalEditarLabel">Editar Usuario</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
-            </div>
-            <div class="modal-body">
-                <div class="mb-3">
-                    <label for="editarFecha" class="form-label">Fecha de examen</label>
-                    <input type="date" class="form-control" id="editarFecha" name="fecha_examen">
+        <div class="modal-dialog">
+            <div class="modal-content">
+            <form id="formEditar">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalEditarLabel">Editar Usuario</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
                 </div>
-                <div class="mb-3">
-                    <label for="editarLab" class="form-label">Correo</label>
-                    <input type="number" class="form-control" id="editarLab" name="lab" min="1">
+                    <div class="modal-body">
+                    <div class="mb-3">
+                        <input type="hidden" id="editarBoleta" name="boleta">
+                        <p id="boletaTexto" class="form-control-plaintext"></p>
+                    </div>
+                    <div class="mb-3">
+                        <label for="editarFecha" class="form-label">Fecha de examen</label>
+                        <input type="date" class="form-control" id="editarFecha" name="fecha_examen">
+                    </div>
+                    <div class="mb-3">
+                        <label for="editarLab" class="form-label">Laboratorio Examen</label>
+                        <input type="number" class="form-control" id="editarLab" name="lab" min="1">
+                    </div>
                 </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-primary">Guardar Cambios</button>
+                </div>
+            </form>
             </div>
-            <div class="modal-footer">
-                <button type="submit" class="btn btn-primary">Guardar Cambios</button>
-            </div>
-        </form>
         </div>
-    </div>
     </div>
     
     <!-- Scripts -->

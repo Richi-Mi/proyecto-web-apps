@@ -2,9 +2,9 @@
 # 1. Definimos parametros de la conexión.
 $host = "localhost"; 
 $port = "5432";    
-$dbname = "proyectoweb";
-$user = "richi_mc";     
-$password = "Jose1914";
+$dbname = "alumnos";
+$user = "postgres";     
+$password = "christo123";
 
 # 2. Intenta establecer la conexión
 $conn = pg_connect("host=$host port=$port dbname=$dbname user=$user password=$password");
