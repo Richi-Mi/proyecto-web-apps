@@ -2,29 +2,30 @@ CREATE DATABASE alumnos;
 USE alumnos;
 
 CREATE TABLE administrador (
-    username VARCHAR(16),
+    username varchar(16),
     correo VARCHAR(32) UNIQUE,
     password VARCHAR(32)
 );
 
-CREATE TABLE examen (
-    fecha DATE,
-    lab INT AUTO_INCREMENT PRIMARY KEY,
+create table examen (
+    fecha date,
+    lab SERIAL PRIMARY KEY,
     hora TINYINT
 );
 
-CREATE TABLE alumno (
-    boleta VARCHAR(10) PRIMARY KEY,
-    nombre VARCHAR(64),
+create table alumno (
+    boleta varchar(10) PRIMARY KEY,
+    nombre varchar(64),
     telefono BIGINT,
     curp VARCHAR(18),
     entidad VARCHAR(32),
     genero BOOLEAN,
-    fecha DATE,
+    fecha date,
     escuela VARCHAR(32),
     promedio FLOAT,
     correo VARCHAR(32),
     password VARCHAR(32),
-    data_examen INT,
-    FOREIGN KEY (data_examen) REFERENCES examen (lab)
+    data_examen int,
+
+    Foreign Key (data_examen) REFERENCES examen (lab)   
 );
